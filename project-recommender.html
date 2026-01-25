@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cold-Start Recommendation — Rohith Srinivasa</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="sticky site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Homepage">
+        <div class="brand-title">Rohith Srinivasa</div>
+        <div class="brand-sub muted">Data Analyst · Business Analytics</div>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="projects.html">Projects</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="resume.html">Resume</a>
+        <a class="nav-link nav-cta" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Case study header -->
+    <section class="container case-hero" data-aos="fade-up">
+      <a class="back-link" href="projects.html">← Back to projects</a>
+
+      <div class="case-title-row">
+        <div>
+          <p class="kicker muted">Recommenders · Product analytics</p>
+          <h1 class="case-title">Cold-start movie recommendation</h1>
+          <p class="case-subtitle">
+            Designed a practical approach to improve recommendation relevance for new users with no interaction history.
+          </p>
+        </div>
+
+        <div class="case-links" aria-label="Project links">
+          <a
+            class="btn ghost"
+            href="https://github.com/rohith-66/coldstart-movie-recommender"
+            target="_blank"
+            rel="noopener"
+          >
+            View GitHub →
+          </a>
+        </div>
+      </div>
+
+      <!-- Snapshot strip -->
+      <div class="case-snapshot" role="group" aria-label="Project snapshot">
+        <div class="snap-item">
+          <div class="snap-label">Tools</div>
+          <div class="snap-value">Python · Embeddings · Similarity analysis</div>
+        </div>
+        <div class="snap-item">
+          <div class="snap-label">Data</div>
+          <div class="snap-value">Movie metadata (titles, genres, descriptions)</div>
+        </div>
+        <div class="snap-item">
+          <div class="snap-label">Focus</div>
+          <div class="snap-value">Cold-start logic + product relevance</div>
+        </div>
+        <div class="snap-item">
+          <div class="snap-label">Impact</div>
+          <div class="snap-value">Improved early-stage recommendation quality</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case study body -->
+    <section class="container case-body" data-aos="fade-up">
+      <div class="case-grid">
+        <!-- Main content -->
+        <article class="case-main">
+          <h2>Business problem</h2>
+          <p>
+            New users often receive poor recommendations because systems lack historical interaction data.
+            The goal was to improve early recommendation relevance without relying on user behavior.
+          </p>
+
+          <h2>Data and constraints</h2>
+          <ul>
+            <li>Movie metadata including titles, genres, and descriptions.</li>
+            <li>Little-to-no interaction history for new users.</li>
+            <li>Need for a fast, deployable approach suitable for early-stage products.</li>
+          </ul>
+
+          <h2>Approach</h2>
+          <ol>
+            <li>Generated semantic embeddings from movie content using pre-trained language models.</li>
+            <li>Computed item-to-item similarity with cosine similarity.</li>
+            <li>Designed logic that transitions from content-based recommendations to collaborative signals as data accrues.</li>
+            <li>Benchmarked performance against simple popularity-based baselines.</li>
+          </ol>
+
+          <h2>Key insights</h2>
+          <ul>
+            <li>Embedding-based similarity significantly improved relevance for cold-start users.</li>
+            <li>Content-based recommendations outperformed popularity baselines for niche interests.</li>
+            <li>Simple similarity logic can be production-ready without heavy infrastructure.</li>
+          </ul>
+
+          <h2>Outcome</h2>
+          <p>
+            Delivered a clear, interpretable cold-start recommendation strategy with measurable improvements
+            over baseline approaches, suitable for early-stage personalization.
+          </p>
+
+          <h2>What I’d do next</h2>
+          <ul>
+            <li>Incorporate lightweight feedback signals (likes, skips) to refine recommendations.</li>
+            <li>A/B test recommendation logic to quantify engagement lift.</li>
+            <li>Extend the approach to other domains such as articles or products.</li>
+          </ul>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="case-aside">
+          <div class="case-card">
+            <h3 class="case-card-title">At a glance</h3>
+
+            <div class="mini">
+              <div class="mini-label">Primary deliverable</div>
+              <div class="mini-value">Cold-start recommendation logic + evaluation</div>
+            </div>
+
+            <div class="mini">
+              <div class="mini-label">Stakeholder</div>
+              <div class="mini-value">Product / growth teams</div>
+            </div>
+
+            <div class="mini">
+              <div class="mini-label">My role</div>
+              <div class="mini-value">EDA · similarity modeling · evaluation</div>
+            </div>
+
+            <div class="mini">
+              <div class="mini-label">Constraint</div>
+              <div class="mini-value">No user history at recommendation time</div>
+            </div>
+          </div>
+
+          <div class="case-card">
+            <h3 class="case-card-title">Key methods</h3>
+            <ul class="tight-list">
+              <li>Content embeddings</li>
+              <li>Cosine similarity</li>
+              <li>Baseline comparison</li>
+              <li>Product-oriented evaluation</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Rohith Srinivasa</p>
+      <div class="footer-links">
+        <a href="projects.html">Projects</a>
+        <span class="dot">•</span>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 650, offset: 80 });
+  </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phishing Scam Detection — Rohith Srinivasa</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header (match Home/Projects) -->
+  <header class="sticky site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Homepage">
+        <div class="brand-title">Rohith Srinivasa</div>
+        <div class="brand-sub muted">Data Analyst · Business Analytics</div>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="projects.html">Projects</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="resume.html">Resume</a>
+        <a class="nav-link nav-cta" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Case study header -->
+    <section class="container case-hero" data-aos="fade-up">
+      <a class="back-link" href="projects.html">← Back to projects</a>
+
+      <div class="case-title-row">
+        <div>
+          <p class="kicker muted">NLP · Prioritization</p>
+          <h1 class="case-title">Phishing scam detection (applied NLP)</h1>
+          <p class="case-subtitle">
+            Identified high-signal, explainable risk indicators to support faster and more reliable security triage decisions.
+          </p>
+        </div>
+
+        <div class="case-links" aria-label="Project links">
+          <a
+            class="btn ghost"
+            href="https://github.com/rohith-66/Phishing-detection"
+            target="_blank"
+            rel="noopener"
+          >
+            View GitHub →
+          </a>
+        </div>
+        
+      </div>
+
+      <!-- Snapshot strip -->
+      <div class="case-snapshot" role="group" aria-label="Project snapshot">
+        <div class="snap-item">
+          <div class="snap-label">Tools</div>
+          <div class="snap-value">Python · SQL · Tableau</div>
+        </div>
+        <div class="snap-item">
+          <div class="snap-label">Data</div>
+          <div class="snap-value">Text + metadata (inconsistent labels)</div>
+        </div>
+        <div class="snap-item">
+          <div class="snap-label">Focus</div>
+          <div class="snap-value">Explainable risk features + analyst workflow</div>
+        </div>
+        <div class="snap-item">
+          <div class="snap-label">Impact</div>
+          <div class="snap-value">Faster triage while keeping human oversight</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case study body -->
+    <section class="container case-body" data-aos="fade-up">
+      <div class="case-grid">
+        <!-- Main content -->
+        <article class="case-main">
+          <h2>Business problem</h2>
+          <p>
+            Security teams handle large volumes of suspicious messages and can’t manually review everything.
+            They need a reliable, explainable way to prioritize cases for investigation—signals analysts can trust and audit.
+          </p>
+
+          <h2>Data and constraints</h2>
+          <ul>
+            <li>Unstructured text + metadata with inconsistent labeling.</li>
+            <li>Severe class imbalance (true phishing cases are rare).</li>
+            <li>Explainability requirement: analysts must understand why something is flagged.</li>
+          </ul>
+
+          <h2>Approach</h2>
+          <ol>
+            <li>Normalized and cleaned text using a Python preprocessing pipeline.</li>
+            <li>Explored simple, high-signal text indicators (urgency language, suspicious phrasing).</li>
+            <li>Engineered interpretable metadata features (URL patterns, domain mismatch signals, attachment flags).</li>
+            <li>Built Tableau views to expose drivers and support triage workflows.</li>
+          </ol>
+
+          <h2>Key insights</h2>
+          <ul>
+            <li>Urgency language + URL patterns captured a large share of high-risk cases.</li>
+            <li>Metadata features often provided stronger signal than complex embeddings.</li>
+            <li>Explainable indicators increased analyst trust and made the workflow usable in practice.</li>
+          </ul>
+
+          <h2>Outcome</h2>
+          <p>
+            Delivered an analyst-friendly prioritization approach using explainable risk indicators and reporting views.
+            This improved triage speed while keeping full analyst oversight for final decisions.
+          </p>
+
+          <h2>What I’d do next</h2>
+          <ul>
+            <li>Add an analyst feedback loop to refine indicators over time.</li>
+            <li>Monitor shifts in phishing language and retrain/refresh features as patterns change.</li>
+            <li>Combine rule-based signals with small interpretable models for scalability.</li>
+          </ul>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="case-aside">
+          <div class="case-card">
+            <h3 class="case-card-title">At a glance</h3>
+
+            <div class="mini">
+              <div class="mini-label">Primary deliverable</div>
+              <div class="mini-value">Explainable indicators + triage dashboard</div>
+            </div>
+
+            <div class="mini">
+              <div class="mini-label">Stakeholder</div>
+              <div class="mini-value">Security analysts / fraud monitoring team</div>
+            </div>
+
+            <div class="mini">
+              <div class="mini-label">My role</div>
+              <div class="mini-value">EDA · feature engineering · dashboarding</div>
+            </div>
+
+            <div class="mini">
+              <div class="mini-label">Constraints</div>
+              <div class="mini-value">Class imbalance · label noise · explainability</div>
+            </div>
+          </div>
+
+          <div class="case-card">
+            <h3 class="case-card-title">Key methods</h3>
+            <ul class="tight-list">
+              <li>Text preprocessing</li>
+              <li>Interpretable feature engineering</li>
+              <li>Risk indicator analysis</li>
+              <li>Tableau reporting for workflow</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Rohith Srinivasa</p>
+      <div class="footer-links">
+        <a href="projects.html">Projects</a>
+        <span class="dot">•</span>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 650, offset: 80 });
+  </script>
+</body>
+</html>

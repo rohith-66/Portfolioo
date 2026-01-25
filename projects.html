@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Rohith Srinivasa</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- AOS (optional, since your home uses it) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header (match Home) -->
+  <header class="sticky site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Homepage">
+        <div class="brand-title">Rohith Srinivasa</div>
+        <div class="brand-sub muted">Data Analyst · Business Analytics</div>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="projects.html">Projects</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link nav-cta" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page intro -->
+    <section class="container projects-hero" data-aos="fade-up">
+      <p class="kicker muted">Selected work</p>
+      <h1 class="page-title">Projects</h1>
+      <p class="page-subtitle">
+        Each project is framed around a business question, the analysis performed, and the recommendation or outcome.
+      </p>
+
+      <!-- Filters (UI only — no JS required) -->
+      <div class="filters" aria-label="Project filters">
+        <span class="filter active">All</span>
+        <span class="filter">Dashboards</span>
+        <span class="filter">Forecasting</span>
+        <span class="filter">NLP</span>
+        <span class="filter">Recommenders</span>
+        <span class="filter">Sports analytics</span>
+      </div>
+    </section>
+
+    <!-- Projects grid -->
+    <section class="container projects-section" data-aos="fade-up">
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <a href="project-bike.html" class="proj-card" aria-label="View project: Bike demand forecasting">
+          <div class="proj-top">
+            <div class="proj-tags">
+              <span class="tag">Forecasting</span>
+              <span class="tag">Operations</span>
+            </div>
+            <span class="proj-cta">View case study →</span>
+          </div>
+
+          <h2 class="proj-title">Forecasted bike demand to support operational planning</h2>
+          <p class="proj-desc">
+            Used historical ridership data to model seasonality and peak demand, then translated insights into a dashboard that supports daily planning decisions.
+          </p>
+
+          <div class="proj-meta">
+            <div>
+              <p class="meta-label">Outcome</p>
+              <p class="meta-value">Clear demand patterns + forecast-driven planning view</p>
+            </div>
+            <div>
+              <p class="meta-label">Stack</p>
+              <p class="meta-value">Python (Pandas) · SQL · Power BI</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="project-phishing.html" class="proj-card" aria-label="View project: Phishing scam detection">
+          <div class="proj-top">
+            <div class="proj-tags">
+              <span class="tag">NLP</span>
+              <span class="tag">Prioritization</span>
+            </div>
+            <span class="proj-cta">View case study →</span>
+          </div>
+
+          <h2 class="proj-title">Improved phishing triage using explainable risk indicators</h2>
+          <p class="proj-desc">
+            Analyzed text + metadata patterns to surface high-signal indicators and built reporting views that support faster triage and analyst prioritization.
+          </p>
+
+          <div class="proj-meta">
+            <div>
+              <p class="meta-label">Outcome</p>
+              <p class="meta-value">Risk signals + monitoring views for investigation workflow</p>
+            </div>
+            <div>
+              <p class="meta-label">Stack</p>
+              <p class="meta-value">Python · SQL · Tableau</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="project-recommender.html" class="proj-card" aria-label="View project: Cold-start movie recommendation">
+          <div class="proj-top">
+            <div class="proj-tags">
+              <span class="tag">Recommenders</span>
+              <span class="tag">Similarity</span>
+            </div>
+            <span class="proj-cta">View case study →</span>
+          </div>
+
+          <h2 class="proj-title">Designed a cold-start recommendation approach with embeddings</h2>
+          <p class="proj-desc">
+            Built an embedding-based similarity workflow to improve recommendations when user history is unavailable, focusing on explainability and early personalization.
+          </p>
+
+          <div class="proj-meta">
+            <div>
+              <p class="meta-label">Outcome</p>
+              <p class="meta-value">Cold-start strategy + interpretable similarity logic</p>
+            </div>
+            <div>
+              <p class="meta-label">Stack</p>
+              <p class="meta-value">Python · Embeddings · Similarity analysis</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- Optional slot for your "current sports dataset" work -->
+        <a href="project-sports.html" class="proj-card ghost-card" aria-label="View project: Sports analytics (ongoing)">
+          <div class="proj-top">
+            <div class="proj-tags">
+              <span class="tag">Sports analytics</span>
+              <span class="tag">Ongoing</span>
+            </div>
+            <span class="proj-cta">In progress</span>
+          </div>
+
+          <h2 class="proj-title">Sports analytics (ongoing)</h2>
+          <p class="proj-desc">
+            Working with large sports datasets to build reusable analysis pipelines, KPI reporting, and time-based insights. (Publishing case study soon.)
+          </p>
+
+          <div class="proj-meta">
+            <div>
+              <p class="meta-label">Focus</p>
+              <p class="meta-value">Data cleaning · KPI definition · trend analysis</p>
+            </div>
+            <div>
+              <p class="meta-label">Stack</p>
+              <p class="meta-value">SQL · Python · Visualization</p>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Rohith Srinivasa</p>
+      <div class="footer-links">
+        <a href="https://github.com/rohith-66" target="_blank" rel="noopener">GitHub</a>
+        <span class="dot">•</span>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 650, offset: 80 });
+  </script>
+</body>
+</html>
