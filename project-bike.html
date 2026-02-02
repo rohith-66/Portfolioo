@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bike Demand Forecasting — Rohith Srinivasa</title>
   <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- AOS (optional, consistent with other pages) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Header (match Home/Projects) -->
+  <!-- Header (match site-wide) -->
   <header class="sticky site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Homepage">
@@ -23,138 +21,131 @@
         <a class="nav-link" href="index.html">Home</a>
         <a class="nav-link active" href="projects.html">Projects</a>
         <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link" href="resume.html">Resume</a>
+        <a class="nav-link" href="experience.html">Experience</a>
         <a class="nav-link nav-cta" href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Case study header -->
+    <!-- Hero -->
     <section class="container case-hero" data-aos="fade-up">
-      <a class="back-link" href="projects.html">← Back to projects</a>
+      <!-- Back link: subtle -->
+      <a href="projects.html" class="muted"
+         style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+        <span aria-hidden="true">←</span> Back to Projects
+      </a>
 
-      <div class="case-title-row">
+      <div class="case-title-row" style="margin-top:12px;">
         <div>
           <p class="kicker muted">Forecasting · Operations</p>
-          <h1 class="case-title">Bike demand forecasting</h1>
+          <h1 class="case-title">Bike Demand Forecasting</h1>
           <p class="case-subtitle">
-            Forecasted short-term demand to support redistribution planning and reduce peak-hour availability gaps.
+            Short-term demand forecasting to support bike redistribution planning and reduce peak-hour availability gaps.
           </p>
         </div>
 
-        <div class="case-links" aria-label="Project links">
-          <a
-            class="btn ghost"
-            href="https://github.com/rohith-66/bike-demand-mlops"
-            target="_blank"
-            rel="noopener"
-          >
-            View GitHub →
+        <!-- GitHub: icon-only, classic black -->
+        <div class="case-links" style="display:flex; align-items:center; justify-content:flex-end;">
+          <a href="https://github.com/rohith-66/bike-demand-mlops"
+             target="_blank" rel="noopener"
+             aria-label="Open GitHub repository"
+             title="GitHub"
+             style="display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px;
+                    border-radius:12px; border:1px solid rgba(15,23,42,.10); background:#fff;
+                    box-shadow:0 10px 28px rgba(0,0,0,.05); text-decoration:none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="#111827"
+                d="M12 .5C5.73.5.75 5.7.75 12.2c0 5.22 3.44 9.64 8.21 11.2.6.12.82-.27.82-.59
+                0-.29-.01-1.06-.02-2.08-3.34.75-4.04-1.66-4.04-1.66-.54-1.43-1.33-1.81-1.33-1.81
+                -1.09-.78.08-.77.08-.77 1.2.09 1.84 1.28 1.84 1.28 1.07 1.9 2.8 1.35 3.49 1.03
+                .11-.8.42-1.35.76-1.66-2.67-.32-5.47-1.38-5.47-6.14 0-1.36.46-2.47 1.22-3.34
+                -.12-.32-.53-1.6.12-3.34 0 0 1-.33 3.3 1.28a11.1 11.1 0 0 1 3-.42c1.02 0 2.04.14 3 .42
+                2.3-1.61 3.3-1.28 3.3-1.28.65 1.74.24 3.02.12 3.34.76.87 1.22 1.98 1.22 3.34
+                0 4.78-2.8 5.82-5.48 6.14.43.39.82 1.16.82 2.34 0 1.69-.02 3.06-.02 3.48
+                0 .33.22.72.83.59 4.77-1.56 8.2-5.98 8.2-11.2C23.25 5.7 18.27.5 12 .5z"/>
+            </svg>
           </a>
-        </div>
-        
-      </div>
-
-      <!-- Snapshot strip -->
-      <div class="case-snapshot" role="group" aria-label="Project snapshot">
-        <div class="snap-item">
-          <div class="snap-label">Tools</div>
-          <div class="snap-value">Python (Pandas) · SQL · Power BI</div>
-        </div>
-        <div class="snap-item">
-          <div class="snap-label">Data</div>
-          <div class="snap-value">Historical rentals · weather · calendar</div>
-        </div>
-        <div class="snap-item">
-          <div class="snap-label">Focus</div>
-          <div class="snap-value">Operational forecasting + stakeholder delivery</div>
-        </div>
-        <div class="snap-item">
-          <div class="snap-label">Impact</div>
-          <div class="snap-value">Improved planning for high-risk stations/windows</div>
         </div>
       </div>
     </section>
 
-    <!-- Case study body -->
+    <!-- Body -->
     <section class="container case-body" data-aos="fade-up">
       <div class="case-grid">
         <!-- Main content -->
         <article class="case-main">
-          <h2>Business problem</h2>
+          <h2>Problem</h2>
           <p>
-            Bike-sharing systems often become imbalanced: some stations overflow at peak hours while others run empty.
+            Bike-sharing systems become imbalanced: some stations overflow at peak hours while others run empty.
             Operations teams need short-term demand forecasts to proactively redistribute bikes and reduce service gaps.
           </p>
 
-          <h2>Data and constraints</h2>
+          <h2>Approach</h2>
           <ul>
-            <li>Historical rental data with timestamps, station identifiers, and usage counts.</li>
-            <li>Weather and calendar signals used as external features.</li>
-            <li>Messy time-series: missing values, outliers, and strong seasonality.</li>
-            <li>No true streaming pipeline — forecasts built from periodic snapshots.</li>
+            <li><strong>Prepared</strong> time-series rentals using SQL + Pandas (aggregation, missing values, outliers, seasonality checks).</li>
+            <li><strong>Analyzed</strong> daily/weekly seasonality and peak windows to identify actionable station-time risk patterns.</li>
+            <li><strong>Benchmarked</strong> forecasting baselines to capture the strongest operational signal with minimal complexity.</li>
+            <li><strong>Delivered</strong> forecasts and “high-risk station” views in a planner-friendly Power BI dashboard.</li>
           </ul>
 
-          <h2>Approach</h2>
-          <ol>
-            <li>Aggregated and cleaned time-series data using SQL and Pandas.</li>
-            <li>Performed EDA to identify daily/weekly seasonality and peak windows.</li>
-            <li>Benchmarked baseline forecasting approaches to capture actionable signal.</li>
-            <li>Packaged forecasts + station risk views into a Power BI dashboard for planners.</li>
-          </ol>
 
-          <h2>Key insights</h2>
-          <ul>
-            <li>Strong daily + weekly demand patterns; peak windows are consistent.</li>
-            <li>Weather materially affects short-term demand (rain reduces trips).</li>
-            <li>A small subset of stations repeatedly experience shortages during peak windows.</li>
-            <li>Simple forecasting baselines captured most of the actionable signal needed for redistribution.</li>
+          <h2>Insights</h2>
+          <ul class="tight-list">
+            <li><strong>Stable peak windows:</strong> daily and weekly peaks repeat reliably, making redistribution timing predictable.</li>
+            <li><strong>Weather matters:</strong> rain and temperature shifts materially change short-term demand.</li>
+            <li><strong>Risk concentrates:</strong> a small subset of stations repeatedly drive the majority of peak-hour shortages.</li>
+            <li><strong>Simple wins:</strong> baseline forecasting captured most actionable signal needed for ops planning.</li>
           </ul>
 
           <h2>Outcome</h2>
-          <p>
-            Delivered a forecasting workflow and dashboard that highlighted high-risk stations and time windows.
-            This supported redistribution planning and helped reduce peak-hour availability issues.
-          </p>
+          <ul class="tight-list">
+            <li>Delivered a forecasting workflow + dashboard highlighting <strong>high-risk stations</strong> and <strong>high-risk time windows</strong>.</li>
+            <li>Enabled planners to allocate redistribution effort where it prevents the most service gaps.</li>
+          </ul>
 
-          <h2>What I’d do next</h2>
-          <ul>
+          <h2>Next steps</h2>
+          <ul class="tight-list">
             <li>Integrate near-real-time telemetry for rolling forecasts and live rebalancing.</li>
-            <li>Build station-level optimization to suggest redistribution routes.</li>
-            <li>Set up monitoring for forecast accuracy and drift to maintain reliability over time.</li>
+            <li>Build station-level optimization to recommend redistribution routes.</li>
+            <li>Set up monitoring for forecast accuracy and drift.</li>
           </ul>
         </article>
 
         <!-- Sidebar -->
-        <aside class="case-aside">
-          <div class="case-card">
-            <h3 class="case-card-title">At a glance</h3>
+        <aside class="case-aside" aria-label="Project snapshot and takeaways">
+          <!-- Force clean formatting (no new classes) -->
+          <div class="case-card"
+               style="border:1px solid rgba(15,23,42,.10); border-radius:18px; background:#fff;
+                      box-shadow:0 10px 28px rgba(0,0,0,.06); padding:16px;">
+            <h3 class="case-card-title" style="margin:0 0 10px 0;">At a glance</h3>
 
-            <div class="mini">
-              <div class="mini-label">Primary deliverable</div>
-              <div class="mini-value">Planner-ready dashboard + short-term forecasts</div>
+            <div class="mini" style="padding:10px 0; border-top:1px solid rgba(15,23,42,.08);">
+              <div class="mini-label" style="letter-spacing:.08em; text-transform:uppercase; font-size:.75rem;">Tools</div>
+              <div class="mini-value" style="margin-top:4px;">Python (Pandas) · SQL · Power BI</div>
             </div>
 
-            <div class="mini">
-              <div class="mini-label">Stakeholder</div>
-              <div class="mini-value">Operations / planning team</div>
+            <div class="mini" style="padding:10px 0; border-top:1px solid rgba(15,23,42,.08);">
+              <div class="mini-label" style="letter-spacing:.08em; text-transform:uppercase; font-size:.75rem;">Data</div>
+              <div class="mini-value" style="margin-top:4px;">Historical rentals · weather · calendar</div>
             </div>
 
-            <div class="mini">
-              <div class="mini-label">My role</div>
-              <div class="mini-value">EDA · forecasting · dashboard delivery</div>
+            <div class="mini" style="padding:10px 0; border-top:1px solid rgba(15,23,42,.08);">
+              <div class="mini-label" style="letter-spacing:.08em; text-transform:uppercase; font-size:.75rem;">Primary deliverable</div>
+              <div class="mini-value" style="margin-top:4px;">Planner-ready dashboard + short-term forecasts</div>
             </div>
 
-            <div class="mini">
-              <div class="mini-label">Artifacts</div>
-              <div class="mini-value">Notebook · SQL queries · Power BI report</div>
+            <div class="mini" style="padding:10px 0; border-top:1px solid rgba(15,23,42,.08);">
+              <div class="mini-label" style="letter-spacing:.08em; text-transform:uppercase; font-size:.75rem;">Stakeholder</div>
+              <div class="mini-value" style="margin-top:4px;">Operations / planning team</div>
             </div>
           </div>
 
-          <div class="case-card">
-            <h3 class="case-card-title">Key methods</h3>
-            <ul class="tight-list">
+          <div class="case-card"
+               style="margin-top:14px; border:1px solid rgba(15,23,42,.10); border-radius:18px; background:#fff;
+                      box-shadow:0 10px 28px rgba(0,0,0,.06); padding:16px;">
+            <h3 class="case-card-title" style="margin:0 0 10px 0;">Methods used</h3>
+            <ul class="tight-list" style="margin:0; padding-left:18px;">
               <li>Time-series aggregation</li>
               <li>Seasonality + trend analysis</li>
               <li>Baseline model comparison</li>

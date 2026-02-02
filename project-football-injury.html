@@ -1,57 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>European Football Injury Impact & Risk Analysis | Rohith Srinivasa</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>European Football Injury Impact & Risk Analysis — Rohith Srinivasa</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Keep your existing header/nav here (copy from other project pages) -->
+  <!-- Header (site-wide) -->
+  <header class="sticky site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Homepage">
+        <div class="brand-title">Rohith Srinivasa</div>
+        <div class="brand-sub muted">Data Analyst · Business Analytics</div>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="projects.html">Projects</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="experience.html">Experience</a>
+        <a class="nav-link nav-cta" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <main>
-    <section class="project-hero container">
-      <p class="muted">SQL · Power BI · Analytics</p>
-      <h1>European Football Injury Impact & Risk Analysis</h1>
-      <p class="muted" style="max-width: 70ch;">
-        Decision-focused analysis of 15,600+ football injury records across Europe’s top leagues to quantify
-        player availability loss, club-level injury impact, and high-risk player profiles.
-      </p>
+    <!-- Hero -->
+    <section class="container case-hero" data-aos="fade-up">
+      <!-- Back link: subtle -->
+      <a href="projects.html" class="muted"
+         style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+        <span aria-hidden="true">←</span> Back to Projects
+      </a>
 
-      <div class="cta-actions" style="margin-top: 14px;">
-        <a class="btn primary-lg" href="https://github.com/rohith-66/football-injury-analysis" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn ghost" href="projects.html">Back to Projects</a>
+      <div class="case-title-row" style="margin-top:12px;">
+        <div>
+          <h1 class="case-title">European Football Injury Impact &amp; Risk Analysis</h1>
+          <p class="case-subtitle">
+            Decision-focused analysis of <strong>15,600+</strong> injury records across Europe’s top leagues to quantify
+            availability loss, club-level impact, and high-risk player profiles — delivered as a multi-page Power BI dashboard.
+          </p>
+        </div>
+
+        <!-- GitHub: icon-only, classic black -->
+        <div class="case-links" style="display:flex; align-items:center; justify-content:flex-end;">
+          <a href="https://github.com/rohith-66/football-injury-analysis"
+             target="_blank" rel="noopener"
+             aria-label="Open GitHub repository"
+             title="GitHub"
+             style="display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px;
+                    border-radius:12px; border:1px solid rgba(15,23,42,.10); background:#fff;
+                    box-shadow:0 10px 28px rgba(0,0,0,.05); text-decoration:none;">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path fill="#111827"
+                d="M12 .5C5.73.5.75 5.7.75 12.2c0 5.22 3.44 9.64 8.21 11.2.6.12.82-.27.82-.59
+                0-.29-.01-1.06-.02-2.08-3.34.75-4.04-1.66-4.04-1.66-.54-1.43-1.33-1.81-1.33-1.81
+                -1.09-.78.08-.77.08-.77 1.2.09 1.84 1.28 1.84 1.28 1.07 1.9 2.8 1.35 3.49 1.03
+                .11-.8.42-1.35.76-1.66-2.67-.32-5.47-1.38-5.47-6.14 0-1.36.46-2.47 1.22-3.34
+                -.12-.32-.53-1.6.12-3.34 0 0 1-.33 3.3 1.28a11.1 11.1 0 0 1 3-.42c1.02 0 2.04.14 3 .42
+                2.3-1.61 3.3-1.28 3.3-1.28.65 1.74.24 3.02.12 3.34.76.87 1.22 1.98 1.22 3.34
+                0 4.78-2.8 5.82-5.48 6.14.43.39.82 1.16.82 2.34 0 1.69-.02 3.06-.02 3.48
+                0 .33.22.72.83.59 4.77-1.56 8.2-5.98 8.2-11.2C23.25 5.7 18.27.5 12 .5z"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="container" style="margin-top: 22px;">
-      <img class="project-cover" src="assets/img/projects/football-injury/overview.png"
-           alt="Power BI dashboard — European Football Injury Impact & Risk Analysis" />
-    </section>
+    <!-- Body -->
+    <section class="container case-body" data-aos="fade-up">
+      <div class="case-grid">
+        <!-- Main column -->
+        <div class="case-main">
+          <h2>Problem</h2>
+          <p>
+            Clubs lose points and money when key players are unavailable — but injury impact is often tracked in fragments.
+            This case study consolidates injury history into a decision-ready view to answer:
+            <strong>where is availability loss concentrated, who drives it, and which profiles are most at risk?</strong>
+          </p>
 
-    <section class="container project-body" style="margin-top: 26px;">
-      <h2>What I built</h2>
-      <ul>
-        <li>Built a multi-page Power BI dashboard analyzing 15,600+ football injury records across Europe’s top leagues to quantify player availability loss, club-level injury impact, and high-risk player profiles.</li>
-        <li>Performed data cleaning, validation, and aggregation in SQL (MySQL), defining KPIs such as days missed, injury severity, and risk concentration, and cross-validating all dashboard metrics against SQL queries.</li>
-        <li>Designed decision-focused visualizations (KPI summaries, club impact analysis, player risk profiling, age/position severity patterns) to communicate insights to non-technical stakeholders.</li>
-      </ul>
+          <h2>Approach</h2>
+          <ul>
+            <li><strong>Modeled</strong> injury events in SQL (MySQL), cleaned/validated records, and built derived metrics for <strong>days missed</strong>, <strong>severity</strong>, and <strong>risk concentration</strong>.</li>
+            <li><strong>Built</strong> a multi-page Power BI dashboard with KPI summaries, club comparisons, and player-level risk profiling for non-technical stakeholders.</li>
+            <li><strong>Validated</strong> dashboard totals and breakdowns by cross-checking visuals against SQL aggregates (joins, group-bys, derived measures).</li>
+          </ul>
 
-      <h2 style="margin-top: 22px;">Screens</h2>
-      <div class="project-gallery">
-        <img src="assets/img/projects/football-injury/overview.png" alt="Dashboard overview page" />
-        <img src="assets/img/projects/football-injury/Impact.png" alt="Club impact analysis page" />
-        <img src="assets/img/projects/football-injury/player-risk.png" alt="Player risk profiling page" />
+          <h2>Evidence</h2>
+          <p class="muted">Selected views highlighting club availability loss, player risk profiles, and injury severity patterns.</p>
+
+          <div class="project-gallery" aria-label="Dashboard screenshots">
+            <img src="assets/images/projects/football-injury/overview.png" alt="Overview dashboard: KPI summary and overall availability loss" />
+            <img src="assets/images/projects/football-injury/club-impact.png" alt="Club impact dashboard: total days missed and club comparison" />
+            <img src="assets/images/projects/football-injury/Impact.png" alt="Player risk profiling dashboard: high-risk players and metrics" />
+            <img src="assets/images/projects/football-injury/Full.png" alt="Age/position patterns dashboard: severity shifts by role and age band" />
+          </div>
+
+          <h2>Insights</h2>
+          <ul class="tight-list">
+            <li><strong>Availability loss is concentrated:</strong> a small set of clubs and severe injuries account for a disproportionate share of total days missed.</li>
+            <li><strong>High-impact players drive totals:</strong> player-level risk profiling surfaces individuals whose absence explains a large portion of club-level loss.</li>
+            <li><strong>Predictable patterns exist:</strong> severity shifts by age/position can inform conditioning priorities and rotation planning.</li>
+          </ul>
+
+          <h2>Outcome</h2>
+          <ul class="tight-list">
+            <li>Delivered a stakeholder-ready Power BI report to support <strong>medical + roster planning</strong>.</li>
+            <li>Built a repeatable SQL foundation to refresh metrics as new injury data arrives.</li>
+          </ul>
+        </div>
+
+        <!-- Right column -->
+        <aside class="case-aside" aria-label="Project snapshot and takeaways">
+          <!-- FORCE proper formatting via inline styles (still reusing existing hooks) -->
+          <div class="case-card"
+               style="border:1px solid rgba(15,23,42,.10); border-radius:18px; background:#fff;
+                      box-shadow:0 10px 28px rgba(0,0,0,.06); padding:16px;">
+            <h3 class="case-card-title" style="margin:0 0 10px 0;">At a glance</h3>
+
+            <div class="mini" style="padding:10px 0; border-top:1px solid rgba(15,23,42,.08);">
+              <div class="mini-label" style="letter-spacing:.08em; text-transform:uppercase; font-size:.75rem;">Dataset</div>
+              <div class="mini-value" style="margin-top:4px;">15,600+ injury records across multiple European leagues</div>
+            </div>
+
+            <div class="mini" style="padding:10px 0; border-top:1px solid rgba(15,23,42,.08);">
+              <div class="mini-label" style="letter-spacing:.08em; text-transform:uppercase; font-size:.75rem;">Key metrics</div>
+              <div class="mini-value" style="margin-top:4px;">Days missed · Severity · Risk concentration</div>
+            </div>
+
+            <div class="mini" style="padding:10px 0; border-top:1px solid rgba(15,23,42,.08);">
+              <div class="mini-label" style="letter-spacing:.08em; text-transform:uppercase; font-size:.75rem;">Deliverable</div>
+              <div class="mini-value" style="margin-top:4px;">Multi-page Power BI dashboard built for decision-makers</div>
+            </div>
+
+            <div class="mini" style="padding:10px 0; border-top:1px solid rgba(15,23,42,.08);">
+              <div class="mini-label" style="letter-spacing:.08em; text-transform:uppercase; font-size:.75rem;">Stack</div>
+              <div class="mini-value" style="margin-top:4px;">SQL (MySQL) · Power BI</div>
+            </div>
+          </div>
+
+          <div class="case-card"
+               style="margin-top:14px; border:1px solid rgba(15,23,42,.10); border-radius:18px; background:#fff;
+                      box-shadow:0 10px 28px rgba(0,0,0,.06); padding:16px;">
+            <h3 class="case-card-title" style="margin:0 0 10px 0;">Quick takeaways</h3>
+
+            <div class="mini" style="padding:10px 0; border-top:1px solid rgba(15,23,42,.08);">
+              <div class="mini-label" style="letter-spacing:.08em; text-transform:uppercase; font-size:.75rem;">Primary decision</div>
+              <div class="mini-value" style="margin-top:4px;">Focus interventions on clubs with concentrated availability loss and severe-injury clustering.</div>
+            </div>
+
+            <div class="mini" style="padding:10px 0; border-top:1px solid rgba(15,23,42,.08);">
+              <div class="mini-label" style="letter-spacing:.08em; text-transform:uppercase; font-size:.75rem;">Validation</div>
+              <div class="mini-value" style="margin-top:4px;">All KPIs cross-checked against SQL aggregates and reconciled across pages.</div>
+            </div>
+
+            <div class="mini" style="padding:10px 0; border-top:1px solid rgba(15,23,42,.08);">
+              <div class="mini-label" style="letter-spacing:.08em; text-transform:uppercase; font-size:.75rem;">Repo</div>
+              <div class="mini-value" style="margin-top:4px;">
+                <a href="https://github.com/rohith-66/football-injury-analysis" target="_blank" rel="noopener">
+                  github.com/rohith-66/football-injury-analysis
+                </a>
+              </div>
+            </div>
+
+            <div class="mini" style="padding:10px 0; border-top:1px solid rgba(15,23,42,.08);">
+              <div class="mini-label" style="letter-spacing:.08em; text-transform:uppercase; font-size:.75rem;">Next step</div>
+              <div class="mini-value" style="margin-top:4px;">Add team-season filtering and a risk watchlist export for staff workflows.</div>
+            </div>
+          </div>
+        </aside>
       </div>
-
-      <h2 style="margin-top: 22px;">Links</h2>
-      <ul>
-        <li><a href="https://github.com/rohith-66/football-injury-analysis" target="_blank" rel="noopener">GitHub repository</a></li>
-      </ul>
     </section>
   </main>
 
-  <!-- Keep your existing footer here -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Rohith Srinivasa</p>
+      <div class="footer-links">
+        <a href="https://github.com/rohith-66" target="_blank" rel="noopener">GitHub</a>
+        <span class="dot">•</span>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 650, offset: 80 });
+  </script>
 </body>
 </html>

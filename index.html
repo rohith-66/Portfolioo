@@ -29,7 +29,6 @@
         <a class="nav-link active" href="index.html">Home</a>
         <a class="nav-link" href="projects.html">Projects</a>
         <a class="nav-link" href="about.html">About</a>
-        
         <a class="nav-link" href="experience.html">Experience</a>
         <a class="nav-link nav-cta" href="contact.html">Contact</a>
       </nav>
@@ -58,7 +57,6 @@
               </svg>
             </a>
 
-            <!-- Replace with your real LinkedIn URL -->
             <a class="social-link" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zM8 8h3.83v2.05h.05c.53-1 1.82-2.05 3.75-2.05C19.4 8 21 10.1 21 13.1V23h-4v-8.3c0-2-.04-4.5-2.75-4.5-2.75 0-3.17 2.15-3.17 4.37V23H7.99V8z"/>
@@ -82,13 +80,13 @@
           </p>
 
           <p class="hero-status">
-            M.S. Data Science & Analytics — Arizona State University · ~2 years analytics experience · Ongoing analytics projects (large sports datasets)
+            M.S. Data Science &amp; Analytics — Arizona State University · ~2 years analytics experience · Ongoing analytics projects (sports datasets)
           </p>
 
           <div class="badge-row" aria-label="What I deliver">
-            <span class="badge">Dashboards & KPI reporting</span>
-            <span class="badge">Forecasting & planning</span>
-            <span class="badge">Process & ops insights</span>
+            <span class="badge">Dashboards &amp; KPI reporting</span>
+            <span class="badge">Forecasting &amp; planning</span>
+            <span class="badge">Process &amp; ops insights</span>
             <span class="badge">Stakeholder-ready storytelling</span>
           </div>
 
@@ -101,83 +99,83 @@
       </div>
     </section>
 
-    <!-- Proof -->
+    <!-- Proof (premium rows, not boxes) -->
     <section class="proof container" data-aos="fade-up">
       <div class="proof-grid">
         <div class="proof-card">
-          <h3 class="proof-title">Analytics that supports operations</h3>
-          <p class="proof-desc">Clear KPIs, anomaly checks, and recurring reporting that stakeholders trust.</p>
+          <h3 class="proof-title">KPI reporting stakeholders trust</h3>
+          <p class="proof-desc">Clear definitions, validation checks, and consistent logic across recurring reporting.</p>
         </div>
         <div class="proof-card">
           <h3 class="proof-title">Dashboards that reduce back-and-forth</h3>
-          <p class="proof-desc">Self-serve views with definitions, filters, and drilldowns that match how teams work.</p>
+          <p class="proof-desc">Self-serve views with drilldowns that match how teams investigate performance.</p>
         </div>
         <div class="proof-card">
           <h3 class="proof-title">Insights → recommendations</h3>
-          <p class="proof-desc">I translate findings into actions and tradeoffs, not just charts.</p>
+          <p class="proof-desc">I translate findings into decisions and tradeoffs — not just charts.</p>
         </div>
       </div>
     </section>
 
-    <!-- Featured Projects -->
-    <section class="projects-preview container" data-aos="fade-up">
-      <div class="projects-head">
-        <div>
-          <h2 class="projects-title">Featured projects</h2>
-          <p class="projects-intro">
-            Case studies framed for hiring managers: problem → analysis → recommendation → result.
+    <section class="selected-work container" data-aos="fade-up">
+      <div class="selected-head">
+        <h2>Selected work</h2>
+        <p>A few projects that show how I approach analytics problems end-to-end — from messy data to decisions.</p>
+      </div>
+    
+      <!-- FEATURED (text-first, abstract chart strip on right) -->
+      <div class="featured-work">
+        <div class="featured-content">
+          <h3>European football injury impact &amp; risk analysis</h3>
+    
+          <p>
+            Analyzed 15,600+ injury records across European leagues to quantify availability loss,
+            identify high-risk players, and produce decision-ready reporting for club and medical teams.
+          </p>
+    
+          <ul style="margin:10px 0 6px 0; padding-left:18px; color:var(--muted); line-height:1.6;">
+            <li>Quantified total days missed &amp; severity by club and player.</li>
+            <li>Built KPI-driven Power BI dashboards cross-validated against SQL aggregates.</li>
+            <li>Delivered actionable recommendations to reduce availability risk.</li>
+          </ul>
+    
+          <div class="featured-meta">
+            SQL (MySQL) · Power BI · Time-series
+          </div>
+    
+          <p style="margin-top:14px;">
+            <a href="project-football-injury.html" style="color:var(--accent); font-weight:800; text-decoration:none;">
+              View case study →
+            </a>
           </p>
         </div>
-        <a href="projects.html" class="btn ghost">See all</a>
+    
+        <!-- abstract / cropped blurred strip (supports the story, not dominates it) -->
+        <a href="project-football-injury.html" class="featured-strip" aria-hidden="false" title="Abstract: football injury dashboard">
+          <img src="assets/images/projects/football-injury/overview.png" alt="Abstracted dashboard visual" />
+        </a>
       </div>
-
-      <div class="project-grid">
-        <a href="project-bike.html" class="project-card" aria-label="View project: Bike demand forecasting">
-          <div class="card-left">
-            <div class="card-tag">Forecasting · Operations</div>
-            <h3 class="card-title">Forecasted demand to reduce peak-hour bike shortages</h3>
-            <p class="card-desc">
-              Built time-series models and an ops dashboard to support daily redistribution decisions and reduce availability gaps.
-            </p>
-            <div class="card-meta">
-              <span>Python · SQL</span>
-              <span>Time-series · Dashboarding</span>
-            </div>
-          </div>
-          <div class="card-right"><span class="view">View case study →</span></div>
-        </a>
-
-        <a href="project-phishing.html" class="project-card" aria-label="View project: Phishing triage prioritization">
-          <div class="card-left">
-            <div class="card-tag">Classification · Prioritization</div>
-            <h3 class="card-title">Improved phishing triage prioritization with explainable signals</h3>
-            <p class="card-desc">
-              Identified risk drivers and built dashboard views to help analysts focus effort and speed up investigations.
-            </p>
-            <div class="card-meta">
-              <span>Python · Tableau</span>
-              <span>Explainability · Reporting</span>
-            </div>
-          </div>
-          <div class="card-right"><span class="view">View case study →</span></div>
-        </a>
+    
+      <!-- OTHER PROJECTS (text-only list) -->
+      <div class="other-work">
+        <div class="work-row">
+          <a href="project-bike.html" class="work-link">
+            <h4>Forecasted demand to reduce peak-hour bike shortages</h4>
+            <p>Built short-term forecasts and planner-ready dashboards to highlight high-risk stations and time windows for redistribution.</p>
+            <div class="work-meta">Python · SQL · Time-series · Dashboarding</div>
+          </a>
+        </div>
+    
+        <div class="work-row">
+          <a href="project-phishing.html" class="work-link">
+            <h4>Phishing scam detection with explainable signals</h4>
+            <p>Identified interpretable, high-signal text and metadata indicators and surfaced them in analyst-facing reporting.</p>
+            <div class="work-meta">Python · Tableau · Explainability</div>
+          </a>
+        </div>
       </div>
     </section>
-
-    <!-- CTA -->
-    <section class="home-cta container" data-aos="fade-up">
-      <div class="cta-card">
-        <div>
-          <h2 class="cta-title">Want the 30-second version?</h2>
-          <p class="cta-desc">
-            I’m looking for Data Analyst / Business Analyst roles where I can own reporting, build dashboards, and ship insights that influence decisions.
-          </p>
-        </div>
-        <div class="cta-actions">
-          <a href="contact.html" class="btn primary-lg">Contact</a>
-          <a href="resume.html" class="btn ghost">View resume</a>
-        </div>
-      </div>
+    
     </section>
   </main>
 
